@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy S22 — Night Reel</title>
+    <meta
+      name="description"
+      content="Galaxy S22를 영화 같은 스크롤 경험으로 소개하는 시네마틱 웹사이트. 나이트그래피 카메라, 디자인, 스펙."
+    />
+    <meta name="theme-color" content="#06060a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body>
+    <!-- ── 필름 오버레이 ───────────────────────────────── -->
+    <div class="film" aria-hidden="true">
+      <div class="film__grain"></div>
+      <div class="film__vignette"></div>
+      <div class="film__scan"></div>
+      <div class="film__bar film__bar--top"></div>
+      <div class="film__bar film__bar--bottom"></div>
+    </div>
+
+    <!-- ── HUD ─────────────────────────────────────────── -->
+    <div class="hud" aria-hidden="true">
+      <span class="hud__rec"><i></i>REC</span>
+      <span class="hud__time" data-timecode>00:00:00:00</span>
+      <span class="hud__iso">ISO 3200 · ƒ1.8 · 24FPS</span>
+    </div>
+
+    <nav class="rail" aria-label="챕터">
+      <span class="rail__track"><span class="rail__fill" data-rail-fill></span></span>
+      <ol class="rail__list">
+        <li><a href="#hero" data-chapter-link="hero"><b>01</b><span>OPEN</span></a></li>
+        <li><a href="#camera" data-chapter-link="camera"><b>02</b><span>NIGHT</span></a></li>
+        <li><a href="#colors" data-chapter-link="colors"><b>03</b><span>COLOR</span></a></li>
+        <li><a href="#specs" data-chapter-link="specs"><b>04</b><span>SPEC</span></a></li>
+        <li><a href="#outro" data-chapter-link="outro"><b>05</b><span>WRAP</span></a></li>
+      </ol>
+    </nav>
+
+    <!-- ── 인트로 커튼 ─────────────────────────────────── -->
+    <div class="intro" id="intro">
+      <div class="intro__inner">
+        <span class="intro__brand">SAMSUNG</span>
+        <span class="intro__count" data-counter>000</span>
+        <span class="intro__label">GALAXY S22 / NIGHT REEL</span>
+      </div>
+    </div>
+
+    <main>
+      <!-- ══ 01 HERO ═══════════════════════════════════ -->
+      <section class="hero" id="hero" data-chapter="hero">
+        <div class="hero__glow" data-hero-glow></div>
+
+        <div class="hero__copy">
+          <p class="eyebrow" data-hero-fade>삼성 갤럭시 · 2022</p>
+          <h1 class="hero__title">
+            <span class="hero__line"><span data-hero-line>GALAXY</span></span>
+            <span class="hero__line hero__line--alt"><span data-hero-line>S22</span></span>
+          </h1>
+          <p class="hero__sub" data-hero-fade>
+            영화 같은 하루를 위한 카메라.<br />
+            나이트그래피로 다시 쓰는 밤.
+          </p>
+          <p class="hero__meta" data-hero-fade>SM-S901 · 6.1&Prime; · 167g</p>
+        </div>
+
+        <div class="hero__stage" data-hero-stage>
+          <img
+            class="hero__phone"
+            data-hero-phone
+            src="/images/cut-pink.webp"
+            alt="갤럭시 S22 핑크 골드, 전면과 후면"
+            width="954"
+            height="1149"
+          />
+          <span class="hero__halo" data-hero-halo></span>
+        </div>
+
+        <div class="hero__cue" data-hero-fade>
+          <span class="hero__cue-line"></span>
+          <span>SCROLL TO PLAY</span>
+        </div>
+      </section>
+
+      <!-- ══ MANIFESTO ═════════════════════════════════ -->
+      <section class="manifesto">
+        <span class="manifesto__ghost" aria-hidden="true">NIGHT</span>
+        <div class="manifesto__body">
+          <p class="eyebrow" data-fade>NIGHTOGRAPHY</p>
+          <h2 class="manifesto__line" data-split>밤은 어둠이 아니라</h2>
+          <h2 class="manifesto__line manifesto__line--accent" data-split>
+            또 하나의 렌즈였습니다.
+          </h2>
+          <p class="manifesto__note" data-fade>
+            빛이 사라진 자리에서, S22는 오히려 더 선명해집니다.<br />
+            세 개의 렌즈와 야간 알고리즘이 프레임을 세 번 겹쳐 그립니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══ 02 CAMERA ═════════════════════════════════ -->
+      <section class="camera" id="camera" data-chapter="camera">
+        <div class="camera__pin">
+          <span class="camera__ghost" aria-hidden="true">NIGHT</span>
+
+          <div class="camera__head">
+            <p class="eyebrow">CH.02 — NIGHTOGRAPHY</p>
+            <h2 class="camera__title" data-split>어둠을 찍다</h2>
+
+            <!-- 넓은 화면에서는 리드선 콜아웃, 그 이하에서는 이 행으로 표시 -->
+            <ul class="camera__lenses">
+              <li><b>50MP</b><em>메인 · F1.8 · OIS</em></li>
+              <li><b>12MP</b><em>초광각 · 120°</em></li>
+              <li><b>10MP</b><em>망원 · 3x Optical</em></li>
+            </ul>
+          </div>
+
+          <div class="camera__stage" data-camera-stage>
+            <img
+              class="camera__phone"
+              data-camera-phone
+              src="/images/cut-black.webp"
+              alt="갤럭시 S22 팬텀 블랙 후면 카메라"
+              width="889"
+              height="1066"
+            />
+            <span class="camera__flash" data-camera-flash></span>
+
+            <!-- 제품 이미지와 같은 박스에 얹고 같은 트랜스폼을 먹여 핀이 렌즈를 정확히 따라가게 한다 -->
+            <div class="camera__marks" data-camera-marks>
+              <div class="lens lens--1" data-lens>
+                <span class="lens__pin"></span>
+                <span class="lens__card">
+                  <b>50MP</b>
+                  <em>메인 · F1.8 · OIS</em>
+                </span>
+              </div>
+              <div class="lens lens--2" data-lens>
+                <span class="lens__pin"></span>
+                <span class="lens__card">
+                  <b>12MP</b>
+                  <em>초광각 · 120°</em>
+                </span>
+              </div>
+              <div class="lens lens--3" data-lens>
+                <span class="lens__pin"></span>
+                <span class="lens__card">
+                  <b>10MP</b>
+                  <em>망원 · 3x Optical</em>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="camera__foot">
+            <p class="camera__copy" data-fade>
+              야간 모드가 프레임을 여러 번 합성합니다.<br />
+              손떨림은 OIS가, 노이즈는 AI가 지웁니다.
+            </p>
+            <p class="camera__badge">8K 24fps</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ STILL ═════════════════════════════════════ -->
+      <section class="still">
+        <div class="still__frame">
+          <img
+            class="still__img"
+            data-still-img
+            src="/images/s22-series.webp"
+            alt="갤럭시 S22와 S22+ 네 가지 컬러 제품 컷"
+            width="1600"
+            height="1132"
+          />
+          <div class="still__caption">
+            <span>SHOT ON GALAXY S22</span>
+            <span>01 / 01</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ 03 COLORS ═════════════════════════════════ -->
+      <section class="colors" id="colors" data-chapter="colors">
+        <div class="colors__pin">
+          <div class="colors__head">
+            <p class="eyebrow">CH.03 — DESIGN</p>
+            <h2 class="colors__title" data-split>네 가지 컬러, 하나의 실루엣</h2>
+          </div>
+
+          <div class="colors__track" data-colors-track>
+            <article class="swatch" data-swatch style="--tone: #f2f0ec">
+              <div class="swatch__stage">
+                <img src="/images/cut-white.webp" alt="팬텀 화이트" width="889" height="1067" />
+              </div>
+              <div class="swatch__info">
+                <span class="swatch__idx">01</span>
+                <h3>Phantom White</h3>
+                <p>빛을 머금은 매트 화이트. 지문이 남지 않는 마감.</p>
+                <span class="swatch__chip"></span>
+              </div>
+            </article>
+
+            <article class="swatch" data-swatch style="--tone: #26262b">
+              <div class="swatch__stage">
+                <img src="/images/cut-black.webp" alt="팬텀 블랙" width="889" height="1066" />
+              </div>
+              <div class="swatch__info">
+                <span class="swatch__idx">02</span>
+                <h3>Phantom Black</h3>
+                <p>빛을 삼키는 딥 블랙. 카메라 베젤이 실루엣에 녹아듭니다.</p>
+                <span class="swatch__chip"></span>
+              </div>
+            </article>
+
+            <article class="swatch" data-swatch style="--tone: #e7c6b8">
+              <div class="swatch__stage">
+                <img src="/images/cut-pink.webp" alt="핑크 골드" width="954" height="1149" />
+              </div>
+              <div class="swatch__info">
+                <span class="swatch__idx">03</span>
+                <h3>Pink Gold</h3>
+                <p>새벽빛을 옮긴 로즈 톤. 프레임 테두리는 메탈릭하게.</p>
+                <span class="swatch__chip"></span>
+              </div>
+            </article>
+
+            <article class="swatch swatch--wide" data-swatch style="--tone: #4a5a4e">
+              <div class="swatch__stage">
+                <img
+                  src="/images/s22-hero.webp"
+                  alt="팬텀 화이트, 핑크 골드, 팬텀 블랙, 그린 네 가지 컬러"
+                  width="1600"
+                  height="1065"
+                  
+                />
+              </div>
+              <div class="swatch__info">
+                <span class="swatch__idx">04</span>
+                <h3>+ Phantom Green</h3>
+                <p>팬텀 화이트 · 팬텀 블랙 · 핑크 골드 · 그린. 네 가지 컬러로 완성됩니다.</p>
+                <span class="swatch__chip"></span>
+              </div>
+            </article>
+          </div>
+
+          <div class="colors__progress"><span data-colors-progress></span></div>
+        </div>
+      </section>
+
+      <!-- ══ 04 SPECS ══════════════════════════════════ -->
+      <section class="specs" id="specs" data-chapter="specs">
+        <div class="specs__head">
+          <p class="eyebrow">CH.04 — SPECIFICATION</p>
+          <h2 class="specs__title" data-split>스펙은 숫자로, 경험은 장면으로</h2>
+        </div>
+
+        <ul class="specs__grid">
+          <li class="spec" data-spec>
+            <span class="spec__num" data-count="6.1" data-decimals="1" data-suffix="&Prime;">0</span>
+            <span class="spec__label">Dynamic AMOLED 2X</span>
+            <p>FHD+ · 2340×1080</p>
+          </li>
+          <li class="spec" data-spec>
+            <span class="spec__num" data-count="120" data-suffix="Hz">0</span>
+            <span class="spec__label">Adaptive Refresh</span>
+            <p>48Hz까지 자동으로 내려갑니다</p>
+          </li>
+          <li class="spec" data-spec>
+            <span class="spec__num" data-count="4" data-suffix="nm">0</span>
+            <span class="spec__label">Octa-core Processor</span>
+            <p>8GB RAM · 최대 256GB</p>
+          </li>
+          <li class="spec" data-spec>
+            <span class="spec__num" data-count="3700" data-suffix="mAh">0</span>
+            <span class="spec__label">Battery</span>
+            <p>25W 초고속 충전 · 15W 무선</p>
+          </li>
+          <li class="spec" data-spec>
+            <span class="spec__num" data-count="167" data-suffix="g">0</span>
+            <span class="spec__label">Weight</span>
+            <p>7.6mm · IP68 방수방진</p>
+          </li>
+          <li class="spec" data-spec>
+            <span class="spec__num" data-count="50" data-suffix="MP">0</span>
+            <span class="spec__label">Triple Camera</span>
+            <p>8K 24fps · Nightography</p>
+          </li>
+        </ul>
+
+        <div class="specs__bars" data-spec-bars aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span
+          ><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <!-- ══ 05 OUTRO ══════════════════════════════════ -->
+      <section class="outro" id="outro" data-chapter="outro">
+        <p class="eyebrow" data-fade>CH.05 — WRAP</p>
+        <h2 class="outro__title">
+          <span class="outro__line"><span data-outro-line>당신의 밤을</span></span>
+          <span class="outro__line"><span data-outro-line>찍을 시간.</span></span>
+        </h2>
+        <p class="outro__sub" data-fade>Galaxy S22. 어둠 속에서도 장면은 남습니다.</p>
+        <a class="btn" href="https://www.samsung.com/sec/smartphones/galaxy-s22/" target="_blank" rel="noopener">
+          <span>제품 알아보기</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+
+        <footer class="footer">
+          <span class="footer__brand">SAMSUNG</span>
+          <p class="footer__note">
+            비공식 데모 페이지입니다. 제품 이미지 © Samsung Electronics —
+            <a href="https://news.samsung.com/us/new-samsung-galaxy-s22-s22-deliver-revolutionary-camera-experiences-day-night" target="_blank" rel="noopener">Samsung Newsroom</a>
+            프레스 자료. 스크롤 모션은 GSAP으로 제작했습니다.
+          </p>
+          <span class="footer__year">2022 — 2026</span>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
